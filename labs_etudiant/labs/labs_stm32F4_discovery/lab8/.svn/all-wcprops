@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1697/trunk/labs/labs_stm32F4_discovery/lab8
+END
+init_display.gdb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1695/trunk/labs/labs_stm32F4_discovery/lab8/init_display.gdb
+END
+lab8.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1696/trunk/labs/labs_stm32F4_discovery/lab8/lab8.c
+END
+lab8.oil
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1696/trunk/labs/labs_stm32F4_discovery/lab8/lab8.oil
+END
+init_mem.gdb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1695/trunk/labs/labs_stm32F4_discovery/lab8/init_mem.gdb
+END
+init.gdb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1695/trunk/labs/labs_stm32F4_discovery/lab8/init.gdb
+END
+init_1.gdb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1695/trunk/labs/labs_stm32F4_discovery/lab8/init_1.gdb
+END
