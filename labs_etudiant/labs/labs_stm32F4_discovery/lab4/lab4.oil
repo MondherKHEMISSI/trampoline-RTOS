@@ -72,7 +72,7 @@ CPU lab1 {
   TASK task_1 {
     PRIORITY = 1;
     AUTOSTART = FALSE;
-    ACTIVATION = 1;
+    ACTIVATION = 2;
     SCHEDULE = FULL;
   };
 };

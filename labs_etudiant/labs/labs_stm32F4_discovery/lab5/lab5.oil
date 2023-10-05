@@ -20,7 +20,7 @@ CPU lab1 {
     POSTTASKHOOK = TRUE;
     
     BUILD = TRUE {
-      TRAMPOLINE_BASE_PATH = "../../..";
+      TRAMPOLINE_BASE_PATH = "../../../..";
       APP_SRC = "lab5.c";
       APP_NAME = "lab5_exe";
 CFLAGS  = "-O0";
@@ -53,16 +53,45 @@ TICKSPERBASE = 25;
     ACTIVATION = 1;
     SCHEDULE = FULL;
   };
-  
-  ALARM blink_blink {
+
+  TASK task_1 {
+    PRIORITY = 1;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+
+  TASK task_2 {
+    PRIORITY = 1;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+ 
+ ALARM task_1_On {
     COUNTER = SystemCounter;
     ACTION = ACTIVATETASK {
-      TASK = blink;
+      TASK = task_1;
     };
     AUTOSTART = TRUE {
       APPMODE = std;
-      ALARMTIME = 10;
-      CYCLETIME = 10;
+      ALARMTIME = 6;
+      CYCLETIME = 80;
     };
   };
+  
+  ALARM task_2_Off {
+    COUNTER = SystemCounter;
+    ACTION = ACTIVATETASK {
+      TASK = task_2;
+    };
+    AUTOSTART = TRUE {
+      APPMODE = std;
+      ALARMTIME = 46;
+      CYCLETIME = 80;
+    };
+  };
+  
+  
+
 };

@@ -67,7 +67,7 @@
       "USEINTERNALRESOURCE" : "false"
     },    
     {
-      "ACTIVATION" : 1,
+      "ACTIVATION" : 2,
       "AUTOSTART" : "false",
       "KIND" : "Task",
       "NAME" : "task_1",

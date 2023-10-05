@@ -18,7 +18,7 @@ CPU lab1 {
     STATUS = EXTENDED;
     
     BUILD = TRUE {
-      TRAMPOLINE_BASE_PATH = "../../..";
+      TRAMPOLINE_BASE_PATH = "../../../..";
       APP_SRC = "lab6.c";
       APP_NAME = "lab6_exe";
         CFLAGS  = "-O0";
@@ -41,6 +41,25 @@ CPU lab1 {
   
   APPMODE std {};
   
+  EVENT ev_0 {
+    MASK = AUTO;
+  };
+  
+  EVENT ev_1 {
+    MASK = AUTO;
+  };
+  
+  TASK a_task {
+    PRIORITY = 8;
+    AUTOSTART = TRUE {
+      APPMODE = std;
+    };
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    EVENT = ev_0;
+    EVENT = ev_1;
+  };
+  
   TASK read_button {
     PRIORITY = 1;
     AUTOSTART = FALSE;
@@ -58,5 +77,34 @@ CPU lab1 {
       ALARMTIME = 50;
       CYCLETIME = 50;
     };
+  };
+  
+  TASK blink {
+    PRIORITY = 1;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+  
+  TASK Init {
+    PRIORITY = 1;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+  
+  TASK Final {
+    PRIORITY = 1;
+    AUTOSTART = FALSE;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+  };
+  
+  ALARM blink_blink {
+    COUNTER = SystemCounter;
+    ACTION = ACTIVATETASK {
+      TASK = blink;
+    };
+    AUTOSTART = FALSE;
   };
 };

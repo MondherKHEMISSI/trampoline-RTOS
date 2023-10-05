@@ -10,11 +10,27 @@ FUNC(int, OS_APPL_CODE) main(void)
   return 0;
 }
 
+
 TASK(blink)
 {
   ledToggle(BLUE);
   TerminateTask();
 }
+
+
+TASK(task_1)
+{
+  ledOn(BLUE);
+  TerminateTask();
+}
+
+TASK(task_2)
+{
+  ledOff(BLUE);
+  TerminateTask();
+}
+
+
 #define APP_Task_blink_STOP_SEC_CODE
 #include "tpl_memmap.h"
 
